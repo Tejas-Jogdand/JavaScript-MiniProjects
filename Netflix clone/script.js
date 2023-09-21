@@ -1,7 +1,7 @@
 let movies = [ 
     
     {
-        name:"RRR",
+        name:"RRR", 
         ratting:8.7,
         poster:"https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
         description:"Action movie"
@@ -62,4 +62,9 @@ let movies = [
     }
 
 ]
-console.log(document);
+
+
+function searchMovie(){
+    let movieName = document.getElementById('search').Value;
+    console.log(movieName);
+}
