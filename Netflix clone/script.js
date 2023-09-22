@@ -65,6 +65,6 @@ let movies = [
 
 
 function searchMovie(){
-    let movieName = document.getElementById('search').Value;
+    let movieName =  document.getElementById('search').value;
     console.log(movieName);
 }
