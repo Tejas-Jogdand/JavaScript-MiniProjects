@@ -68,15 +68,20 @@
     background-color: bisque;
     width: 100%;
     padding: 50px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%;
+    row-gap: 25px;
 }
 
 .movie{
-    background-color: brown;
-    height: 450px;
+    /* background-color: brown; */
+    height: 400px;
     width:22%;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+    
 }
 
 .movie-poster{

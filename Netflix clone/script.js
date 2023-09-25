@@ -1,11 +1,4 @@
 let movies = [
-
-    {
-        name: "RRR",
-        ratting: 8.7,
-        poster: "https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
-        description: "Action movie"
-    },
     {
         name: "Infinity war",
         ratting: 9.5,
@@ -13,9 +6,9 @@ let movies = [
         description: "marvel"
     },
     {
-        name: "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UX1000_.jpg",
+        name: "Spider Man",
         ratting: 8.7,
-        poster: "",
+        poster: "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UX1000_.jpg",
         description: "dramer"
     },
     {
@@ -66,7 +59,11 @@ let movies = [
 
 function searchMovie() {
     let movieName = document.getElementById('search').value;
-    console.log(movieName);
+
+    movies.filter(function(movie)
+    {
+        
+    })
 }
 
 function displayMovies() {
@@ -85,8 +82,8 @@ function displayMovies() {
             <div class="details">
 
                 <h1>${movies[i].name}</h1>
-                <h2>IMDB : 9.8</h2>
-                <p>Nat Wolff . Willem Dafoe</p>
+                <h2>IMDB : ${movies[i].ratting}</h2>
+                <p>${movies[i].description}</p>
 
             </div>
         </div>
