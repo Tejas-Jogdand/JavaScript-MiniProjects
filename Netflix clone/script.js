@@ -60,13 +60,20 @@ let movies = [
 function searchMovie() {
     let movieName = document.getElementById('search').value;
 
-    movies.filter(function(movie)
+    if(movieName !=="")
     {
-        
-    })
+        let result = movies.filter(function(movie)
+                     {
+                        return movie.name.toUpperCase().includes(movieName.toUpperCase());
+                     })
+
+        console.log(result);
+    }
 }
 
 function displayMovies() {
+
+    // document.getElementById("movies").innerHTML="";
 
     let htmlString = ` `;
 
@@ -74,10 +81,10 @@ function displayMovies() {
 
         movies[i];
 
-        htmlString=htmlString+`<div class="movie">
+        htmlString=htmlString+`
+        <div class="movie">
         <div class="overlay">
             <div class="video">
-
             </div>
             <div class="details">
 
