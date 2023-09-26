@@ -1,6 +1,6 @@
 let movies = [
     {
-        name: "Infinity war",
+        name: "Avenger : Infinity war",
         ratting: 9.5,
         poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg",
         description: "marvel"
@@ -18,7 +18,7 @@ let movies = [
         description: "entertanment"
     },
     {
-        name: "Endgame",
+        name: "Avenger: Endgame",
         ratting: 8.6,
         poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
         description: "marvel movie"
@@ -67,19 +67,26 @@ function searchMovie() {
                         return movie.name.toUpperCase().includes(movieName.toUpperCase());
                      })
 
-        console.log(result);
+        displayMovies(result);
+
+        if(result.length==0){
+            displayError();
+        }
+    }
+    else
+    {
+        displayMovies(movies);
     }
 }
 
-function displayMovies() {
+function displayMovies(data) {
 
     // document.getElementById("movies").innerHTML="";
 
     let htmlString = ` `;
 
-    for (let i = 0; i < movies.length; i++) {
+    for (let i = 0; i < data.length; i++) {
 
-        movies[i];
 
         htmlString=htmlString+`
         <div class="movie">
@@ -88,13 +95,13 @@ function displayMovies() {
             </div>
             <div class="details">
 
-                <h1>${movies[i].name}</h1>
-                <h2>IMDB : ${movies[i].ratting}</h2>
-                <p>${movies[i].description}</p>
+                <h1>${data[i].name}</h1>
+                <h2>IMDB : ${data[i].ratting}</h2>
+                <p>${data[i].description}</p>
 
             </div>
         </div>
-        <img src="${movies[i].poster}" alt="Death note poster" class="movie-poster">
+        <img src="${data[i].poster}" alt="Death note poster" class="movie-poster">
 
     </div>`;
     }
@@ -103,6 +110,16 @@ function displayMovies() {
 
 }
 
+function displayError(){
+
+    let htmlString=`
+    <div class="no-data">
+    <h1>NO DATA FOUND</h1>
+    </div>
+    `;
+
+    document.getElementById("movie-card").innerHTML=htmlString;
+}
 // prefered way for faster execution
 // let movieDIV = document.createElement("div");
 // movieDIV.classList.add("movie");
@@ -114,4 +131,4 @@ function displayMovies() {
 
 // console.log(movieDIV);
 
-displayMovies();
+displayMovies(movies);

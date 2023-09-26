@@ -76,7 +76,7 @@
 
 .movie{
     /* background-color: brown; */
-    height: 400px;
+    height: 450px;
     width:22%;
     overflow: hidden;
     border-radius: 10px;
@@ -122,4 +122,11 @@
 .temp{
     padding: 10px;
     background-color: bisque;   
+}
+
+.no-data{
+    padding: 80px;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
 }
