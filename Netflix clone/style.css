@@ -122,6 +122,7 @@
 .temp{
     padding: 10px;
     background-color: bisque;   
+    min-height:780px;
 }
 
 .no-data{
